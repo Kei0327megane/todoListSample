@@ -17,15 +17,13 @@ const getVisibleTodos = (todos, filter) => {
 }
 
 const mapStateToProps = state => ({
-  // *** state.todosをstate.visibilityFilterでフィルタし、TodoList に渡す
   todos: getVisibleTodos(state.todos, state.visibilityFilter)
 })
 
 const mapDispatchToProps = dispatch => ({
-  toggleTodo: id => dispatch(toggleTodo(id))  // *** (2) TOGGLE_TODO action
+  toggleTodo: id => dispatch(toggleTodo(id))
 })
 
-// *** TodoListにはstoreの情報がpropsとして渡される
 export default connect(
   mapStateToProps,
   mapDispatchToProps

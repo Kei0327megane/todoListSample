@@ -10,7 +10,7 @@ const Todo = ({ onClick, completed, text }) => (
       control={
         <Checkbox 
           onChange={onClick} 
-          style={{textDecoration: completed ? 'line-through' : 'none'}} />
+          checked={completed ? true : false} />
       } 
       label={text} />
     </FormGroup>

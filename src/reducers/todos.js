@@ -1,3 +1,5 @@
+
+
 const todos = (state = [], action) => {
     switch (action.type) {
       case 'ADD_TODO': 
@@ -15,6 +17,8 @@ const todos = (state = [], action) => {
             ? {...todo, completed: !todo.completed} 
             : todo
         )
+      case 'DELETE_TODO':
+        return []
       default:
         return state
     }
